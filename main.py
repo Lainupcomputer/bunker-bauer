@@ -284,6 +284,15 @@ class HUD:
         self.inventory_button = None
         self.crafting_button = None
         self.skills_button = None
+        # row 2
+        self.build_button = None
+
+        # button img
+        self.inventory_button_img = pygame.image.load('gfx/ui/inventory_btn.png').convert_alpha()
+        self.crafting_button_img = pygame.image.load('gfx/ui/crafting_btn.png').convert_alpha()
+        self.skills_button_img = pygame.image.load('gfx/ui/skills_btn.png').convert_alpha()
+        # row 2
+        self.build_button_img = pygame.image.load('gfx/ui/build_btn.png').convert_alpha()
 
     def draw(self, currency=True, top_bar=True, bottom_right=True):
         if currency:
@@ -321,26 +330,17 @@ class HUD:
             water_bar_rect = water_bar.get_rect()
             water_bar_rect.topleft = (325 + self.offset * 2, 20)  # place
             self.screen.blit(water_bar, water_bar_rect)
-
         if bottom_right:
             # Inventory
-            self.inventory_button = pygame.draw.rect(self.screen, (25, 25, 25), (1200, 650, 50, 50))  # draw background
-            inventory_btn = self.custom_font.render(f"I", True, (155, 155, 155))
-            inventory_btn_rect = inventory_btn.get_rect()
-            inventory_btn_rect.topleft = (1215, 655)  # place
-            self.screen.blit(inventory_btn, inventory_btn_rect)
-            # Crafting
-            self.crafting_button = pygame.draw.rect(self.screen, (25, 25, 25), (1200, 590, 50, 50))  # draw background
-            crafting_btn = self.custom_font.render(f"C", True, (155, 155, 155))
-            crafting_btn_rect = crafting_btn.get_rect()
-            crafting_btn_rect.topleft = (1215, 595)  # place
-            self.screen.blit(crafting_btn, crafting_btn_rect)
-            # skills
-            self.skills_button = pygame.draw.rect(self.screen, (25, 25, 25), (1200, 530, 50, 50))  # draw background
-            skills_btn = self.custom_font.render(f"S", True, (155, 155, 155))
-            skills_btn_rect = skills_btn.get_rect()
-            skills_btn_rect.topleft = (1215, 535)  # place
-            self.screen.blit(skills_btn, skills_btn_rect)
+            self.inventory_button = screen.blit(self.inventory_button_img, (1190, 640))  # draw button
+
+            self.crafting_button = screen.blit(self.crafting_button_img, (1190, 540))  # draw button
+
+            self.skills_button = screen.blit(self.skills_button_img, (1190, 440))  # draw button
+
+            # row 2
+
+            self.build_button = screen.blit(self.build_button_img, (1100, 640))  # draw button
 
     def set(self, energy=(200, 200), food=(200, 200), water=(200, 200), creds=100, mun=100):  # Update Function
         self.bar_energy = energy[0]
