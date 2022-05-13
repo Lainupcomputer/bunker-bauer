@@ -1,0 +1,68 @@
+{
+    "game": {
+        "version": "0.0.1"
+
+    },
+    "savegame":{
+        "map": {
+            "row_1":{
+                "position_y": 210,
+                "tile_1": {
+                    "position_x": 1920,
+                    "status": "owned",
+                    "price": 100,
+                    "room": "entrance",
+                    "construction_stage": 1,
+                    "room_name": "NAME",
+                    "room_health": 100
+                },
+                "tile_2": {
+                    "position_x": 2560,
+                    "status": "owned",
+                    "price": 100,
+                    "room": "reactor",
+                    "construction_stage": 1,
+                    "room_name": "NAME",
+                    "room_health": 100,
+                    "cooldown": 10
+                },
+                "tile_3": {
+                    "position_x": 3200,
+                    "status": "construction",
+                    "price": 100,
+                    "room": "",
+                    "construction_stage": -1,
+                    "room_name": "NAME",
+                    "room_health": 100
+                }
+
+            },
+            "row_2":{
+                "position_y": 470,
+                "tile_1": {
+                    "name": "",
+                    "health": 100,
+                    "level": 1,
+                    "has_animation": false,
+                    "position_x": 1920,
+                    "tile": "sale",
+                    "status": 1,
+                    "room_health": 100
+                },
+                "tile_2": {
+                    "name": "",
+                    "health": 100,
+                    "level": 1,
+                    "has_animation": false,
+                    "position_x": 2560,
+                    "tile": "sale",
+                    "status": 1,
+                    "room_health": 100
+                }
+            }
+
+        }
+
+    }
+
+}
